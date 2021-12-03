@@ -1,4 +1,4 @@
-package days
+package day2
 
 import (
 	"adventOfCode2021/utils"
@@ -17,7 +17,7 @@ func formatMove(line string) Move {
 	return Move{dir, step}
 }
 
-func Day2(lines *[]string) {
+func Task1(lines *[]string) {
 	var moves []Move
 	for _, line := range *lines {
 		moves = append(moves, formatMove(line))
@@ -37,7 +37,7 @@ func Day2(lines *[]string) {
 	println(hor * dep)
 }
 
-func Day2_1(lines *[]string) {
+func Task2(lines *[]string) {
 	var moves []Move
 	for _, line := range *lines {
 		moves = append(moves, formatMove(line))

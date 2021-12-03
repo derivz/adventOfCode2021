@@ -1,4 +1,4 @@
-package days
+package day3
 
 import (
 	"strconv"
@@ -6,7 +6,7 @@ import (
 
 const n = 12
 
-func Day3(lines *[]string) {
+func Task1(lines *[]string) {
 	var c1 [n]int
 	var c0 [n]int
 
@@ -34,7 +34,7 @@ func Day3(lines *[]string) {
 	println(ma * mi)
 }
 
-func Day3_1(lines *[]string) {
+func Task2(lines *[]string) {
 	var c1 [n]int
 	var c0 [n]int
 
