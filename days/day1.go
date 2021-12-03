@@ -3,7 +3,7 @@ package days
 import "adventOfCode2021/utils"
 
 func Day1(lines *[]string) {
-	var data []	int
+	var data []int
 	for _, line := range *lines {
 		data = append(data, utils.ToInt(line))
 	}
@@ -17,7 +17,7 @@ func Day1(lines *[]string) {
 }
 
 func Day1_1(lines *[]string) {
-	var data []	int
+	var data []int
 	for _, line := range *lines {
 		data = append(data, utils.ToInt(line))
 	}

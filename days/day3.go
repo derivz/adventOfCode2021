@@ -31,7 +31,7 @@ func Day3(lines *[]string) {
 	}
 	ma, _ := strconv.ParseInt(cmax, 2, 64)
 	mi, _ := strconv.ParseInt(cmin, 2, 64)
-	println(ma*mi)
+	println(ma * mi)
 }
 
 func Day3_1(lines *[]string) {
@@ -77,5 +77,5 @@ func Day3_1(lines *[]string) {
 	}
 	ma, _ := strconv.ParseInt(cmax, 2, 64)
 	mi, _ := strconv.ParseInt(cmin, 2, 64)
-	println(ma*mi)
+	println(ma * mi)
 }
