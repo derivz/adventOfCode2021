@@ -3,6 +3,7 @@ package utils
 import (
 	"bufio"
 	"fmt"
+	"math"
 	"os"
 	"strconv"
 )
@@ -13,6 +14,10 @@ func ToInt(number string) int {
 		fmt.Println(e)
 	}
 	return val
+}
+
+func IntAbs(num int) int {
+	return int(math.Abs(float64(num)))
 }
 
 func ReadLines(fileName string) *[]string {
