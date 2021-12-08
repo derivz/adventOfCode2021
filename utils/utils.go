@@ -5,7 +5,9 @@ import (
 	"fmt"
 	"math"
 	"os"
+	"sort"
 	"strconv"
+	"strings"
 )
 
 func ToInt(number string) int {
@@ -17,7 +19,10 @@ func ToInt(number string) int {
 }
 
 func IntAbs(num int) int {
-	return int(math.Abs(float64(num)))
+	if num > 0 {
+		return num
+	}
+	return -num
 }
 
 func ReadLines(fileName string) *[]string {
@@ -32,4 +37,40 @@ func ReadLines(fileName string) *[]string {
 		res = append(res, line)
 	}
 	return &res
+}
+
+func Pow(a int, b int) int {
+	return int(math.Pow(float64(a), float64(b)))
+}
+
+func SortString(str string) string {
+	s := strings.Split(str, "")
+	sort.Strings(s)
+	return strings.Join(s, "")
+}
+
+func StringSliceMap(slice []string, fn func(string)string) []string {
+	res := make([]string, len(slice))
+	for i, s := range slice {
+		res[i] = fn(s)
+	}
+	return res
+}
+
+func SortStringsInSlice(strs []string) []string {
+	res := make([]string, len(strs))
+	for i, str := range strs {
+		res[i] = SortString(str)
+	}
+	return res
+}
+
+func StringIntersection(s1 string, s2 string) string {
+	var res []string
+	for _, letter := range strings.Split(s2, "") {
+		if strings.Contains(s1, letter) {
+			res = append(res, letter)
+		}
+	}
+	return strings.Join(res, "")
 }
