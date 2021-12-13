@@ -49,18 +49,10 @@ func SortString(str string) string {
 	return strings.Join(s, "")
 }
 
-func StringSliceMap(slice []string, fn func(string)string) []string {
+func StringSliceMap(slice []string, fn func(string) string) []string {
 	res := make([]string, len(slice))
 	for i, s := range slice {
 		res[i] = fn(s)
-	}
-	return res
-}
-
-func SortStringsInSlice(strs []string) []string {
-	res := make([]string, len(strs))
-	for i, str := range strs {
-		res[i] = SortString(str)
 	}
 	return res
 }
@@ -73,4 +65,16 @@ func StringIntersection(s1 string, s2 string) string {
 		}
 	}
 	return strings.Join(res, "")
+}
+
+func FormatIntSequences(lines *[]string, separator string) *[][]int {
+	var newLines [][]int
+	for _, line := range *lines {
+		var numbers []int
+		for _, el := range strings.Split(line, separator) {
+			numbers = append(numbers, ToInt(el))
+		}
+		newLines = append(newLines, numbers)
+	}
+	return &newLines
 }
